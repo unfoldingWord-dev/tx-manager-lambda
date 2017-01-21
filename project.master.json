@@ -1,0 +1,8 @@
+{
+  "name": "tx-manager",
+  "description": "tX Manager for handling conversions",
+  "memory": 512,
+  "timeout": 300,
+  "role": "arn:aws:iam::002723143144:role/tx_lambda_function",
+  "environment": {}
+}
