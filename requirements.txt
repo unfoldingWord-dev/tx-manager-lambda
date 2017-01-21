@@ -1,1 +1,1 @@
-tx-manager
+git+git://github.com/unfoldingWord-dev/tx-manager.git@develop#egg=tx-manager
