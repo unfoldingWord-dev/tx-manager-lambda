@@ -1,21 +1,18 @@
-# Method for handling the starting of jobs that have been queued in the tx-job table
+from __future__ import unicode_literals
+import logging
+from lambda_handlers.start_job_handler import StartJobHandler
+from aws_tools.dynamodb_handler import DynamoDBHandler
 
-from __future__ import print_function
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
 
-from tx_manager.tx_manager import TxManager
 
+# noinspection PyUnusedLocal
 def handle(event, context):
-    print("------------PROCESSING DB STREAM---------------------")
-    for record in event['Records']:
-        try:
-            if record['eventName'] == 'INSERT' and 'job_id' in record['dynamodb']['Keys']:
-                print(record['eventID'])
-                print(record['eventName'])
-                job_id = record['dynamodb']['Keys']['job_id']['S']
-                TxManager().start_job(job_id)
-        except Exception as e:
-            print("Failed for record:")
-            print(record)
-            print("Error:")
-            print(e)
-    print("------------END PROCESSING DB STREAM---------------------")
+    """
+    Triggered by adding a file to the cdn.door43.org/temp S3 folder
+    :param dict event:
+    :param context:
+    """
+    global logger
+    StartJobHandler.handle_start_job(event, context, DynamoDBHandler, logger)
