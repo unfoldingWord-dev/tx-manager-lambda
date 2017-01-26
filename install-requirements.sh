@@ -2,11 +2,13 @@
 
 set -e
 
+pip install --upgrade pip
+
 for dir in `ls -d functions/*_*`
 do
-  echo $dir
-  if [ -d $dir ];
+  echo ${dir}
+  if [ -d ${dir} ];
   then
-    pip install --upgrade pip install git+ssh://git@github.com/unfoldingword-dev/tx-manager.git@develop -t $dir
+    pip install git+git://github.com/unfoldingWord-dev/tx-manager.git@develop#egg=tx-manager -t ${dir} --upgrade
   fi
 done

@@ -1,0 +1,9 @@
+[run]
+source =
+    functions
+
+include =
+    */tx-manager_list-endpoints/main.py
+    */tx-manager_register-module/main.py
+    */tx-manager_request-job/main.py
+    */tx-manager_start-job/main.py
