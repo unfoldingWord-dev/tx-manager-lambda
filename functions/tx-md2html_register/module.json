@@ -1,0 +1,11 @@
+{
+    "name": "tx-md2html_convert",
+    "version": "1",
+    "type": "conversion",
+    "resource_types": ["obs"],
+    "input_format": ["md"],
+    "output_format": ["html"],
+    "options": [],
+    "private_links": [],
+    "public_links": []
+}

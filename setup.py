@@ -11,12 +11,33 @@ def read(f_name):
 
 setup(
     name="tx-manager-lambda",
-    package_dir={'list-endpoints': 'functions/tx-manager_list-endpoints',
-                 'register-module': 'functions/tx-manager_register-module',
-                 'request-job': 'functions/tx-manager_request-job',
-                 'start-job': 'functions/tx-manager_start-job'},
-    packages=['list-endpoints', 'register-module', 'request-job', 'start-job'],
-    version="0.0.1",
+    version="0.2.1",
+    package_dir={
+        'list-endpoints': 'functions/tx-manager_list-endpoints',
+        'register-module': 'functions/tx-manager_register-module',
+        'request-job': 'functions/tx-manager_request-job',
+        'start-job': 'functions/tx-manager_start-job',
+        'md2html-register': 'functions/tx-usfm2html_register',
+        'md2html-convert': 'functions/tx-md2html_convert',
+        'usfm2html-register': 'functions/tx-usfm2html_register',
+        'usfm2html-convert': 'functions/tx-usfm2html_convert',
+        'webhook': 'functions/client_webhook',
+        'callback': 'functions/client_callback',
+        'deploy': 'functions/door43_deploy'
+    },
+    packages=[
+        'list-endpoints',
+        'register-module',
+        'request-job',
+        'start-job',
+        'md2html-register',
+        'md2html-convert',
+        'usfm2html-register',
+        'usfm2html-convert',
+        'webhook',
+        'callback',
+        'deploy'
+    ],
     author="unfoldingWord",
     author_email="unfoldingword.org",
     description="Lambda functions for tX Manager",
@@ -24,11 +45,14 @@ setup(
     keywords="tX manager lambda",
     url="https://github.org/unfoldingWord-dev/tx-manager-lambda",
     long_description=read('README.rst'),
-    classifiers=[],
+    classifiers=[
+        'License :: OSI Approved :: MIT License',
+        'Programming Language :: Python :: 2.7',
+    ],
     dependency_links=[
-        'git+git://github.com/unfoldingWord-dev/tx-manager.git@develop#egg=tx-manager',
+        'git+git://github.com/unfoldingWord-dev/tx-manager.git@develop#egg=tx-manager-0.2.1',
     ],
     install_requires=[
-        'tx-manager'
+        'tx-manager==0.2.1'
     ]
 )

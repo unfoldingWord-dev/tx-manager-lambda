@@ -1,20 +1,12 @@
-# Method for handling the registration of conversion modules
-
-from __future__ import print_function
-import logging
+from __future__ import unicode_literals, print_function
 from lambda_handlers.list_endpoints_handler import ListEndpointsHandler
-from aws_tools.dynamodb_handler import DynamoDBHandler
-
-logger = logging.getLogger()
-logger.setLevel(logging.INFO)
 
 
-# noinspection PyUnusedLocal
 def handle(event, context):
     """
-    Triggered by adding a file to the cdn.door43.org/temp S3 folder
+    Called by API Gateway when user wants a list of endpoints
     :param dict event:
     :param context:
+    :return dict:
     """
-    global logger
-    ListEndpointsHandler.handle_list_endpoints(event, context, DynamoDBHandler, logger)
+    return ListEndpointsHandler().handle(event, context)

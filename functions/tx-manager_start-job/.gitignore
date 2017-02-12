@@ -1,4 +1,5 @@
 *
-!main.py
-!.gitignore
-!.apexignore
+!/main.py
+!/.gitignore
+!/.apexignore
+!/__init__.py
