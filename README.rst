@@ -4,7 +4,7 @@ master:
     :alt: Build Status
     :target: https://travis-ci.org/unfoldingWord-dev/tx-manager-lambda
 
-.. image:: https://coveralls.io/repos/github/unfoldingWord-dev/tx-manager-lambda/badge.svg?branch=master)
+.. image:: https://coveralls.io/repos/github/unfoldingWord-dev/tx-manager-lambda/badge.svg?branch=master
     :alt: Coveralls
     :target: https://coveralls.io/github/unfoldingWord-dev/tx-manager-lambda?branch=master
 
