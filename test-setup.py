@@ -41,10 +41,10 @@ setup(
         'Programming Language :: Python :: 2.7',
     ],
     dependency_links=[
-        'git+git://github.com/unfoldingWord-dev/tx-manager.git@develop#egg=tx-manager-0.2.1',
+        'git+git://github.com/unfoldingWord-dev/tx-manager.git@develop#egg=tx-manager',
     ],
     install_requires=[
-        'tx-manager==0.2.1'
+        'tx-manager'
     ],
     test_suite='tests'
 )
