@@ -1,0 +1,8 @@
+*
+!/main.py
+!/.gitignore
+!/.apexignore
+!/__init__.py
+!/requirements.txt
+!/function.json
+!/module.json

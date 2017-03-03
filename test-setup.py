@@ -41,7 +41,7 @@ setup(
         'Programming Language :: Python :: 2.7',
     ],
     install_requires=[
-        'tx-manager==0.2.1'
+        'tx-manager==0.2.2'
     ],
     test_suite='tests'
 )
