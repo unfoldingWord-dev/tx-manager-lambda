@@ -3,19 +3,35 @@ python:
   - '2.7'
 
 before_install:
+  - eval export AWS_ACCESS_KEY_ID=\$${TRAVIS_BRANCH}_AWS_ACCESS_KEY_ID
+  - eval export AWS_SECRET_ACCESS_KEY=\$${TRAVIS_BRANCH}_AWS_SECRET_ACCESS_KEY
+  - eval export AWS_REGION=\$${TRAVIS_BRANCH}_AWS_REGION
   - pip install awscli
-  - "./install-apex.sh"
+  - bash ./install-apex.sh
 
 install:
-  - "./install-requirements.sh"
+  - pip install -r requirements.txt
   - pip install coveralls
 
 script: coverage run test-setup.py test
 
 after_success:
   - coveralls
-  - "./deploy.sh"
 
 env:
   global:
     - PYTHONDONTWRITEBYTECODE=true
+
+deploy:
+- provider: script
+  skip_cleanup: true
+  script:
+  - ./apex deploy
+  on:
+    branch: develop
+- provider: script
+  skip_cleanup: true
+  script:
+  - ./apex deploy --env master
+  on:
+    branch: master
