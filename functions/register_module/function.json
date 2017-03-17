@@ -1,3 +1,3 @@
 {
-  "description": "Registers a module, called through the API Gateway by a converter's \"register\" function"
+  "description": "Registers a conversion module, called by https://api.door43.org/tx/module"
 }
