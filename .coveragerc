@@ -5,12 +5,10 @@ source =
 include =
     */client_callback/main.py
     */client_webhook/main.py
+    */convert_md2html/main.py
+    */convert_usfm2html/main.py
     */door43_deploy/main.py
     */list_endpoints/main.py
-    */md2html_convert/main.py
-    */md2html_register/main.py
     */register_module/main.py
     */request_job/main.py
     */start_job/main.py
-    */usfm2html_convert/main.py
-    */usfm2html_register/main.py

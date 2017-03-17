@@ -15,28 +15,24 @@ setup(
     package_dir={
         'client_callback': 'functions/client_callback',
         'client_webhook': 'functions/client_webhook',
+        'convert_md2html': 'functions/convert_md2html',
+        'convert_usfm2html': 'functions/convert_usfm2html',
         'door43_deploy': 'functions/door43_deploy',
         'list_endpoints': 'functions/list_endpoints',
         'register_module': 'functions/register_module',
         'request_job': 'functions/request_job',
-        'start_job': 'functions/start_job',
-        'md2html_register': 'functions/md2html_register',
-        'md2html_convert': 'functions/md2html_convert',
-        'usfm2html_register': 'functions/usfm2html_register',
-        'usfm2html_convert': 'functions/usfm2html_convert'
+        'start_job': 'functions/start_job'
     },
     packages=[
         'client_callback',
         'client_webhook',
+        'convert_md2html',
+        'convert_usfm2html',
         'door43_deploy',
         'list_endpoints',
         'register_module',
         'request_job',
-        'start_job',
-        'md2html_register',
-        'md2html_convert',
-        'usfm2html_register',
-        'usfm2html_convert'
+        'start_job'
     ],
     author="unfoldingWord",
     author_email="unfoldingword.org",

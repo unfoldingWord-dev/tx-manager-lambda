@@ -1,3 +1,0 @@
-{
-  "description": "Registers the usfm2html converter, called when the tx-manager-lambda repo is deployed"
-}
