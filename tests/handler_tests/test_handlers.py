@@ -5,6 +5,7 @@ from functions.client_callback.main import handle
 from functions.client_webhook.main import handle
 from functions.convert_md2html.main import handle
 from functions.convert_usfm2html.main import handle
+from functions.dashboard.main import handle
 from functions.door43_deploy.main import handle
 from functions.list_endpoints.main import handle
 from functions.register_module.main import handle
@@ -20,10 +21,11 @@ class TestHandle(TestCase):
         mock_handle_return_value.return_value = None
         self.assertIsNone(functions.client_callback.main.handle({}, {}))
         self.assertIsNone(functions.client_webhook.main.handle({}, {}))
+        self.assertIsNone(functions.convert_md2html.main.handle({}, {}))
+        self.assertIsNone(functions.convert_usfm2html.main.handle({}, {}))
+        self.assertIsNone(functions.dashboard.main.handle({}, {}))
         self.assertIsNone(functions.door43_deploy.main.handle({}, {}))
         self.assertIsNone(functions.list_endpoints.main.handle({}, {}))
-        self.assertIsNone(functions.convert_md2html.main.handle({}, {}))
         self.assertIsNone(functions.register_module.main.handle({}, {}))
         self.assertIsNone(functions.request_job.main.handle({}, {}))
         self.assertIsNone(functions.start_job.main.handle({}, {}))
-        self.assertIsNone(functions.convert_usfm2html.main.handle({}, {}))
