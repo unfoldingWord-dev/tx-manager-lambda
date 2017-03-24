@@ -1,9 +1,9 @@
 {
-  "name": "tx",
-  "description": "tX Manager for handling conversions",
+  "name": "dev-tx",
+  "description": "DEVELOPMENT tX Manager lambda functions for handling conversions",
   "memory": 512,
   "timeout": 300,
-  "role": "arn:aws:iam::581647696645:role/tx_lambda_function",
+  "role": "arn:aws:iam::002723143144:role/dev-tx_lambda_function",
   "environment": {},
   "hooks":{
     "build": "pip install -r requirements.txt -t ."
