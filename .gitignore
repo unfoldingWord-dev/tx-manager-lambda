@@ -93,3 +93,7 @@ ENV/
 *.iml
 
 activate_virtualenv.sh
+
+# Do not want someone's test project file committed
+project.test.json
+

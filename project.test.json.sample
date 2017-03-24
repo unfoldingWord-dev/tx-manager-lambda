@@ -1,0 +1,11 @@
+{
+  "name": "test-tx",
+  "description": "Testing project for tX Manager",
+  "memory": 512,
+  "timeout": 300,
+  "role": "arn:aws:iam::581647696645:role/tx_lambda_function",
+  "environment": {},
+  "hooks":{
+    "build": "pip install git+https://github.com/<username>/tx-manager.git@<branch> -t ."
+  }
+}
