@@ -6,6 +6,6 @@
   "role": "arn:aws:iam::581647696645:role/tx_lambda_function",
   "environment": {},
   "hooks":{
-    "build": "pip install git+https://github.com/<username>/tx-manager.git@<branch> -t ."
+    "build": "pip install --upgrade git+https://github.com/<username>/tx-manager.git@<branch> -t ."
   }
 }
