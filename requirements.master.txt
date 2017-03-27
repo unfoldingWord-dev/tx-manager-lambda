@@ -1,0 +1,3 @@
+git+git://github.com/unfoldingword-dev/tx-manager.git@master
+mock==2.0.0
+

@@ -49,3 +49,6 @@ environment with apex by doing the following:
 * Install apex from http://apex.run/#installation
 * Set up your AWS credentials as specified at http://apex.run/#aws-credentials
 * Run `apex deploy --env test` to deploy all functions, or `apex deploy --env test [function-name]` for a single function
+
+For more information on using --env to specify a project json file, see https://github.com/apex/apex/blob/master/docs/projects.md#multiple-environments
+

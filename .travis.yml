@@ -7,7 +7,7 @@ before_install:
   - "./travis-install-apex.sh"
 
 install:
-  - pip install -r requirements.txt
+  - bash install-requirements.sh
   - pip install coveralls
 
 script: coverage run test-setup.py test
