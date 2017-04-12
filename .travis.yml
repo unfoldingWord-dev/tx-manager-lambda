@@ -4,7 +4,7 @@ python:
 
 before_install:
   - pip install awscli
-  - "./travis-install-apex.sh"
+  - ./travis-install-apex.sh
 
 install:
   - bash install-requirements.sh
