@@ -1,5 +1,5 @@
 {
-    "name": "tx-md2html_convert",
+    "name": "md2html",
     "version": "1",
     "type": "conversion",
     "resource_types": ["obs"],
