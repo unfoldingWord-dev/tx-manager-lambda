@@ -9,3 +9,10 @@ DEST="${PARENT_DIR}/apex"
 
 curl -sL ${URL} -o ${DEST}
 chmod +x ${DEST}
+
+echo THIS_DIR=$THIS_DIR
+echo PARENT_DIR=$PARENT_DIR
+echo LATEST=$LATEST
+echo URL=$URL
+echo DEST=$DEST
+ls -l ${DEST}
