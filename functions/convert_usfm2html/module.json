@@ -1,5 +1,5 @@
 {
-    "name": "tx-usfm2html_convert",
+    "name": "usfm2html",
     "version": "1",
     "type": "conversion",
     "resource_types": ["bible", "ulb", "udb"],
