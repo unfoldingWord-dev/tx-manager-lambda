@@ -1,2 +1,2 @@
-git+git://github.com/unfoldingword-dev/tx-manager.git@v0.2.2
+git+git://github.com/unfoldingword-dev/tx-manager.git@v0.2.3
 mock==2.0.0
