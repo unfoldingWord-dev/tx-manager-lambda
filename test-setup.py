@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name="tx-manager-lambda",
-    version="0.2.2",
+    version="0.2.3",
     package_dir={
         'client_callback': 'functions/client_callback',
         'client_webhook': 'functions/client_webhook',
