@@ -11,13 +11,14 @@ from functions.list_endpoints.main import handle
 from functions.register_module.main import handle
 from functions.request_job.main import handle
 from functions.start_job.main import handle
+from functions.door43_print.main import handle
 from unittest import TestCase
 
 
-class TestHandle(TestCase):
+class TestHandlers(TestCase):
 
     @patch('lambda_handlers.handler.Handler.handle')
-    def test_handle(self, mock_handle_return_value):
+    def test_handlers(self, mock_handle_return_value):
         mock_handle_return_value.return_value = None
         self.assertIsNone(functions.client_callback.main.handle({}, {}))
         self.assertIsNone(functions.client_webhook.main.handle({}, {}))
@@ -29,3 +30,4 @@ class TestHandle(TestCase):
         self.assertIsNone(functions.register_module.main.handle({}, {}))
         self.assertIsNone(functions.request_job.main.handle({}, {}))
         self.assertIsNone(functions.start_job.main.handle({}, {}))
+        self.assertIsNone(functions.door43_print.main.handle({}, {}))
