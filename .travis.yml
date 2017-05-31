@@ -23,12 +23,12 @@ deploy:
 - provider: script
   skip_cleanup: true
   script:
-  - ./deploy.sh && ./register-modules.sh https://dev-api.door43.org
+  - ./deploy.sh && ./register-modules.sh https://dev-api.door43.org && ./integration_test.sh
   on:
     branch: develop
 - provider: script
   skip_cleanup: true
   script:
-  - ./deploy.sh && ./register-modules.sh https://api.door43.org
+  - ./deploy.sh && ./register-modules.sh https://api.door43.org && ./integration_test.sh
   on:
     branch: master
