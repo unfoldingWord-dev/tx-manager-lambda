@@ -435,14 +435,21 @@ class TestConversions(TestCase):
             checkList = ['{0:0>2}.html'.format(i) for i in range(1, chapterCount + 1)]
             # checkList.append("index.html")
 
+        retry_count = 0;
         for file in checkList:
             path = os.path.join(key, file)
             print("checking destination folder for: " + path)
             output = handler.get_file_contents(path)
-            if output==None: # try again in a moment since upload files may not be finished
+            while output==None: # try again in a moment since upload files may not be finished
                 time.sleep(5)
+                retry_count += 1
+                if retry_count > 7:
+                    print("timeout getting file")
+                    break
+
                 print("retry fetch of: " + path)
                 output = handler.get_file_contents(path)
+
             self.assertIsNotNone(output, "missing file: " + path)
 
         manifest = handler.get_file_contents(os.path.join(key, "manifest.json") )
