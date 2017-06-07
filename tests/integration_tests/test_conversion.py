@@ -55,7 +55,6 @@ class TestConversions(TestCase):
         if hasattr(self, 'temp_dir') and os.path.isdir(self.temp_dir):
             shutil.rmtree(self.temp_dir, ignore_errors=True)
 
-    @unittest.skip("Skipping broken conversion that needs to be fixed - preconvert leaves backslash at end of line")
     def test_ts_mat_conversion(self):
         # given
         if not self.isTestingEnabled(): return # skip test if integration test not enabled
@@ -69,7 +68,6 @@ class TestConversions(TestCase):
         # then
         self.validateConversion(user, repo, success, build_log_json, commitID, commitSha, commitPath, expectedOutputName, job)
 
-    @unittest.skip("Skipping broken conversion that needs to be fixed - Expected end of text (at char 24993), (line:292, col:121) backslash in text")
     def test_ts_acts0_conversion(self):
         # given
         if not self.isTestingEnabled(): return # skip test if integration test not enabled
